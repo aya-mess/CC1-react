@@ -1,13 +1,362 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/*style calculatrice */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.dfs{
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
 }
+.containeree {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    margin: 0 auto;
+
+    width: 400px;
+    text-align: center;
+    border: 10px solid #0e0d0d;
+    background: #000000;
+    border-radius: 5px;
+    height: 470px;
+
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows:minmax(60px,auto) ;
+}
+.input{
+    height: 75px;
+    width: 249px;
+    background-color: #10111600;
+    border: 0px;
+    color: #ffffff;
+    text-align: right;
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+#Clear{
+    grid-column: 3/3;
+    grid-row: 1;
+    color: #262834;
+}
+#result{
+    padding: 30px;
+    position: relative;
+    bottom: 170px;
+    color: #262834;
+    height: 215px;
+}
+#backspace{
+    color: #262834;
+}
+button{
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #262834;
+    color: #ffffff;
+    font-weight: 500;
+}
+.w{
+    height: 50px;
+}
+input:focus,
+input:active,
+button:focus,
+button:active{
+    outline: none;
+}
+
+.heigthligth {
+    background: violet;
+}
+@media only screen and (max-width: 991px) {
+    .containeree {
+        margin-top: 240px; /* La marge pour les écrans de téléphone et tablette */
+    }
+}
+
+/* style todo list */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+
+
+
+.App {
+    text-align: center;
+}
+
+.h11 {
+    color: white;
+    margin-bottom: 0.5rem;
+    font-size: 1.75rem;
+}
+
+.TodoWrapper {
+    background: rgb(0, 0, 0);
+    width: 700px;
+    text-align: center;
+    margin:1rem auto  ;
+
+    padding: 2rem;
+    border-radius: 20px;
+}
+@media only screen and (max-width: 767px) {
+    .TodoWrapper {
+        width: 500px; /* La marge pour les écrans de téléphone */
+    }
+}
+
+.TodoForm {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.todo-input {
+    outline: none;
+    background: none;
+    border: 1px solid violet;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    width: 300px;
+    color: #fff;
+}
+
+.todo-input::placeholder {
+    color: #ffffff4d;
+}
+
+.todo-btn {
+    background:violet;
+    color: #fff;
+    border: none;
+    padding: 0.55rem;
+    cursor: pointer;
+}
+
+.Todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:violet;
+    color: #fff;
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.fa-trash {
+    margin-left: 0.75rem;
+}
+
+.incompleted {
+    color: #fff;
+    cursor: pointer;
+}
+
+.completed {
+    color: violet;
+    text-decoration: line-through;
+    cursor: pointer;
+}
+
+.edit-icon,
+.delete-icon {
+    cursor: pointer;
+}
+
+/* style Pagination */
+
+.SuperstarApp {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 10px auto;
+}
+@media only screen and (max-width: 767px) {
+    .SuperstarApp {
+        width: 350px; /* La marge pour les écrans de téléphone */
+    }
+}
+
+
+.h1 {
+    color:violet;
+    font-size: 2em;
+}
+
+.ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.li {
+    background-color: #fff;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.button {
+    background-color: violet;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+    background-color: violet;
+}
+
+.button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+
+/* style slider  */
+    .slider-container {
+    max-width: 1400px;
+    }
+
+    .slider-image {
+    width: 70%;
+    height: 500px;
+    margin: 10px auto;
+    border-radius: 2rem; 
+    background-position: center;
+    background-size: cover;
+    transition-duration: 0.5s; 
+    }
+
+
+    .nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateX(0) translateY(-50%);
+    font-size: 2rem; 
+    border-radius: 9999px; 
+    padding: 0.5rem; 
+    background-color: rgba(0, 0, 0, 0.2); 
+    color: white; 
+    cursor: pointer;
+    }
+
+    .nav-arrow.prev {
+    left: 5px;
+    }
+
+    .nav-arrow.next {
+    right: 5px;
+    }
+
+    .slider-container:hover .nav-arrow {
+    display: block;
+    }
+
+    .slider-dots {
+    display: flex;
+    position: absolute;
+    top: 4px;
+    justify-content: center;
+    }
+
+    .dot {
+    font-size: 2rem; 
+    cursor: pointer; 
+    margin-right: 0.5rem;
+    }
+
+
+    .dot.active {
+    color: rgb(247, 0, 255); 
+    }
+
+    @media only screen and (max-width: 991px) {
+        .nav-arrow {
+            top: 100%; 
+        }
+    }
+    .container-langs {
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+    }
+    
+    .container-langs img {
+        width: 40px;
+        cursor: pointer;
+        border: 2px solid #ddd;
+        border-radius: 5px;
+        margin: 5px;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .container-langs img:hover {
+        transform: scale(1.1);
+    }
+    .content {
+        padding: 100px ;
+        
+    }
+    .title {
+        font-size: 50px;
+        padding: 20px 0 30px 0;  
+    }
+    
+    .content-txt {
+        font-size: 22px;
+    }
+    
+    
+    .content {
+            padding: 100px ;
+        }
+    .dark-body {
+        background: #222;
+        color: #f1f1f1;
+    }
+    /* BtnToggle.css */
+    .btn-toggle {
+        padding: 10px 20px;
+        font-size: 14px;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    }
+    
+    .btn-toggle.dark-btn {
+        background-color: #333;
+        color: #fff;
+    }
+    
+    .btn-toggle:hover {
+        background-color: #ddd;
+        color: #333;
+    }
